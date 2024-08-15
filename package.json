@@ -2,5 +2,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "twilio": "^5.2.2"
+  },
+  "scripts": {
+    "start": "node change_existing_url.js"
   }
 }
