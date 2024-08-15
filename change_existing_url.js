@@ -11,6 +11,7 @@ require("dotenv").config();
 // and set the environment variables. See http://twil.io/secure
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
+console.log(accountSid, authToken);
 const client = twilio(accountSid, authToken);
 
 app.use(express.json());
@@ -20,7 +21,7 @@ app.post("/updatePhoneNumber", async (req, res) => {
 
     try {
         const incomingPhoneNumber = await client
-            .incomingPhoneNumbers("ACdd12310c87e5b55efb078f95d87c4c6c")
+            .incomingPhoneNumbers("PN7a83c017fbc392905f35f4296b9b466f")
             .update({ voiceUrl: assistantURL });
 
         res.json(incomingPhoneNumber.friendlyName);

@@ -1,5 +1,6 @@
 // Download the helper library from https://www.twilio.com/docs/node/install
 const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+require("dotenv").config();
 
 // Find your Account SID and Auth Token at twilio.com/console
 // and set the environment variables. See http://twil.io/secure
@@ -12,7 +13,7 @@ async function listIncomingPhoneNumber() {
     limit: 20,
   });
 
-  incomingPhoneNumbers.forEach((i) => console.log(i.accountSid));
+  incomingPhoneNumbers.forEach((i) => console.log(i));
 }
 
 listIncomingPhoneNumber();
