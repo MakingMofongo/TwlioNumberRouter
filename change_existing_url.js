@@ -17,7 +17,7 @@ app.post("/updatePhoneNumber", async (req, res) => {
 
     try {
         const incomingPhoneNumber = await client
-            .incomingPhoneNumbers("PN82b92bb370e00e5c303a2096c1316268")
+            .incomingPhoneNumbers("ACdd12310c87e5b55efb078f95d87c4c6c")
             .update({ voiceUrl: assistantURL });
 
         res.json(incomingPhoneNumber.friendlyName);

@@ -15,4 +15,4 @@ async function listIncomingPhoneNumber() {
   incomingPhoneNumbers.forEach((i) => console.log(i.accountSid));
 }
 
-// listIncomingPhoneNumber();
+listIncomingPhoneNumber();
